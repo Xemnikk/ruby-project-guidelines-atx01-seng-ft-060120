@@ -11,8 +11,8 @@ class User < ActiveRecord::Base
     end
 
     def self.get_username
-        given_username = prompt.ask('What is your chosen name?', required: true)
-        confirm_username = prompt.yes?('So I should call you #{given_username}? Is that right?')
+        given_username = PROMPT.ask('What is your chosen name?', required: true)
+        confirm_username = PROMPT.yes?('So I should call you #{given_username}? Is that right?')
         if confirm_username
             if User.find_by(username: given_username) == nil
                 User.create(username: given_username)
@@ -24,4 +24,21 @@ class User < ActiveRecord::Base
             self.get_username
         end
     end
+
+    def self.set_password
+        given_password = PROMPT.mask("Enter your password.", required: true) do |q|
+        q.validate(/^(?=.*[a-zA-Z])(?=.*[0-9]).{6,}$/)
+        q.messages[:valid?] = 'Your password must be at least 6 characters and include one number and one letter.'
+        end
+        confirm_password = PROMPT.mask("Please confirm your password", required: true)
+        if given_password == confirm_password
+            given_password
+        else
+            puts "Looks like your passwords do not match, adventurer. Please try again."
+                self.set_password
+            end
+        end
+
+    end
+
 end
