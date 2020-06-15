@@ -8,8 +8,21 @@ puts "
 
 prompt = TTY::Prompt.new
 prompt.select("Choose your destiny?", %w(NewGame LoadSave ViewChoices Exit))
-prompt.ask('What is your chosen name?', default: ENV['USER'])
-prompt.mask("What is your password")
+prompt.ask('What is your chosen name?', default: ENV['USER']) do |q|
+    q.required true
+    q.validate /\A\w+\Z/
+    q.modify   :capitalize
+  end
+prompt.mask("What is your password") do |q|
+    q.validate(/[a-z\ ]{5,15}/)
+end
+#multiple choice select
+choices = %w(vodka beer wine whisky bourbon)
+prompt.multi_select("Select drinks?", choices)
+#collect answers
+result = prompt.collect do
+    key(:name).ask('Name?')
+end
 
 # if NewGame then
 #     prompt.ask('What is your chosen name?', default: ENV['USER'])
