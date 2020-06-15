@@ -7,3 +7,4 @@ gem "pry"
 gem "require_all"
 gem "colorize"
 gem 'tty-prompt', '~> 0.21.0'
+gem 'ruby2d', '~> 0.9.4'

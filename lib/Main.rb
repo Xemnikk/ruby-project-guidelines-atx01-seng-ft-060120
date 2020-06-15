@@ -1,3 +1,12 @@
+song = Music.new('./music.wav')
+song.loop = true
+song.play
+
+# def play_music 
+#     @song.play
+#     @song.loop = true
+# end
+# play_music
 puts "
 ███████╗ ██████╗ ██████╗  ██████╗███████╗██████╗ ███████╗██████╗ 
 ██╔════╝██╔═══██╗██╔══██╗██╔════╝██╔════╝██╔══██╗██╔════╝██╔══██╗
