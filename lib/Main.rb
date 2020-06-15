@@ -14,14 +14,16 @@ prompt.ask('What is your chosen name?', default: ENV['USER']) do |q|
     q.modify   :capitalize
   end
 prompt.mask("What is your password") do |q|
-    q.validate(/[a-z\ ]{5,15}/)
+    q.validate(/[a-z\ ]{1,15}/)
 end
 #multiple choice select
-choices = %w(vodka beer wine whisky bourbon)
-prompt.multi_select("Select drinks?", choices)
+prompt.say("The year is blah blah blah.")
+sleep(5)
+choices = %w(right left back forward)
+prompt.multi_select("Where will you go?", choices)
 #collect answers
-result = prompt.collect do
-    key(:name).ask('Name?')
+# result = prompt.collect do
+#     key(:name).ask('Who are you?')
 end
 
 # if NewGame then
