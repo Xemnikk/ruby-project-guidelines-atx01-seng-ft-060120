@@ -1,5 +1,7 @@
 class User < ActiveRecord::Base
 
+    PROMPT = TTY::Prompt.new
+
     has_many :saves
     has_many :games, through: :saves
 
