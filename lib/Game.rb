@@ -19,17 +19,17 @@ class Game < ActiveRecord::Base
                             }]},
 
                 :LCon=>{[
-                    
+
                 ]},
                 
 
                 :MiddleBranch =>{
                     :MB=>[
-                    {
-                        ZeroMB:"", 
-                        OneMB:"", 
-                        TwoMB:"",
-                        ThreeMB:"",
+                    { 
+                        OneMB:" You enter the Pitch black hallway,and start to feel your way through the hallway. While waiting for your eyes to adjust, you realise that, at the edge of your vision you can see something moving ahead of you.", 
+                        TwoMB:"There are two points of light ahead of you. As you draw near you see that something has broken through the walls the hole on your left leads to a narrow spiral staircase, and to the right is a room with water dripping from the ceiling. The hallway continues on into a familiar darkness. The things on the ceiling watch you, waiting for you to decide.",
+                        ThreeMB:"There is a drop off to the left, and if you peer through it you can just make out a suit of armour. There is another branching path to the right and you faintly hear the sound of wind chimes. Ahead of you is a black door painted to look like an open mouth. Where do you go?
+                            ",
                         EndM:""
                         }
                         ]
@@ -42,7 +42,8 @@ class Game < ActiveRecord::Base
                 :RightBranch =>{
                     :RB=>[
                         {
-                            ZeroRB:"", 
+                            ZeroRB:"You push open the door, and your shoes get soaked in clear water. The room you enter is lined with old,smooth wood, and leads you into a corridor lined with paintings of landscapes with large,blurry figures in the background.
+                            ", 
                             OneRb:"", 
                             TwoRB:"",
                             ThreeRB:"",
