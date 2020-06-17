@@ -36,8 +36,8 @@ class Game < ActiveRecord::Base
                     },
                 :MCon=>{[
 
-                ]}
-            },
+                ]},
+            
 
                 :RightBranch =>{
                     :RB=>[
