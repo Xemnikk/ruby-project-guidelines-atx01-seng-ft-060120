@@ -41,7 +41,7 @@ class Game < ActiveRecord::Base
     def start_game
         if Main.prompt == Right && R
              choice = start_game[:right_branch][0]
-             puts choice
+             puts choice 
 
         else Main.prompt == Left && L
             choice = start_game[:left_branch][0]

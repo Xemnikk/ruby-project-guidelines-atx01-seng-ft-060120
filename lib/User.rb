@@ -45,8 +45,8 @@ class User < ActiveRecord::Base
             given_name = PROMPT.ask("What will you call this iteration?", required: true) 
             confirm_name = PROMPT.yes?("So, you will go with #{given_name} this time? Interesting.")
             if confirm_name 
-                if User.find_by(name: given_name) == nil
-                    User.create(name: given_name)
+                if User.find_by(display_name: given_name) == nil
+                    User.create(display_name: given_name)
                 else
                     puts "You already own this iteration of the story. Please try again."
                     self.set_name

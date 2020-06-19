@@ -1,15 +1,15 @@
 class Main
 
 require './lib/User.rb'
-song = Music.new('./music.wav')
-song.loop = true
-song.play
+# song = Music.new('./music.wav')
+# song.loop = true
+# song.play
 
-# def play_music 
-#     @song.play
-#     @song.loop = true
-# end
-# play_music
+# # def play_music 
+# #     @song.play
+# #     @song.loop = true
+# # end
+# # play_music
 
 intro_word
 
@@ -116,7 +116,7 @@ end
 self.greet_user
 
 
-#collect answers
+# collect answers
 # result = prompt.collect do
 #     key(:name).ask('Who are you?')
 # end
