@@ -38,6 +38,7 @@ end
 
 
 
+
 def self.new_game
     new_game_word
     @@current_user = User.set_name
