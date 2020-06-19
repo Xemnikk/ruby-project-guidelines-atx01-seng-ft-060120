@@ -43,26 +43,27 @@ def self.new_game
     @@current_user = User.set_name
 #multiple choice select
     begin_word
+    #This is where the game loop should start.
     @prompt.say("The year is blah blah blah.")
     sleep(5)
-    choices = %w(Right Left Back Forward)
+    choices = %w(Right Left Back Forward) # Need to add Save for each choice iteration. 
     @prompt.select("Where will you go?", choices)
     
 end
 
 def load_save
     load_save_word
-    puts "filler"
+    puts "filler" #This should allow User to see previous save_instances and load whichever one the User chooses.
 end
 
 def brave_allies
     brave_allies_word
-    puts "filler"
+    puts "filler" #This should allow the User to see all save_instances for all Users and where they are in the Game. 
 end
 
 def rate
     rate_word
-    puts 'filler'
+    puts 'filler' #This should allow the User to leave a rating for the team developing the game to recommend additions to the game. 
 end
 
 
