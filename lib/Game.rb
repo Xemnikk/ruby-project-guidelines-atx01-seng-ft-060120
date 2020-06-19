@@ -38,17 +38,16 @@ class Game < ActiveRecord::Base
             }
     end
 
-    # def start_game
-    #     if Main.prompt == Right
-    #          choice = start_game[:right_branch][0]
-    #          puts choice
-    #     end
+    def start_game
+        if Main.prompt == Right && R
+             choice = start_game[:right_branch][0]
+             puts choice
 
-    #     else Main.prompt == L/Left
-    #         choice = start_game[:left_branch][0]
-    #         puts choice
-    #     end
-    # end
+        else Main.prompt == Left && L
+            choice = start_game[:left_branch][0]
+            puts choice
+        end
+    end
 
     def branch_progess
         if Main.prompt == continues
