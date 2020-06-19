@@ -1,4 +1,5 @@
 class Game < ActiveRecord::Base
+    PROMPT = TTY::Prompt.new
 
     has_many :saves
     has_many :users, through: :saves
@@ -37,17 +38,17 @@ class Game < ActiveRecord::Base
             }
     end
 
-    def start_game
-        if Main.prompt == R/Right
-             choice = start_game[:right_branch][0]
-             puts choice
-        end
+    # def start_game
+    #     if Main.prompt == Right
+    #          choice = start_game[:right_branch][0]
+    #          puts choice
+    #     end
 
-        else Main.prompt == L/Left
-            choice = start_game[:left_branch][0]
-            puts choice
-        end
-    end
+    #     else Main.prompt == L/Left
+    #         choice = start_game[:left_branch][0]
+    #         puts choice
+    #     end
+    # end
 
     def branch_progess
         if Main.prompt == continues

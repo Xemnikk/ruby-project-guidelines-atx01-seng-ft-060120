@@ -14,7 +14,7 @@ class User < ActiveRecord::Base
 
     def self.get_username
         given_username = PROMPT.ask('What is your chosen name?', required: true)
-        confirm_username = PROMPT.yes?('So I should call you #{given_username}? Is that right?')
+        confirm_username = PROMPT.yes?("So I should call you #{given_username}? Is that right?")
         if confirm_username
             if User.find_by(username: given_username) == nil
                 User.create(username: given_username)
