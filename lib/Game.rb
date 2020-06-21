@@ -38,24 +38,24 @@ class Game < ActiveRecord::Base
             }
     end
 
-    def start_game
-        if Main.prompt == Right && R
+    def self.start_game
+        if Main.prompt == right && R
              choice = start_game[:right_branch][0]
              puts choice 
 
-        else Main.prompt == Left && L
+        else Main.prompt == left && L
             choice = start_game[:left_branch][0]
             puts choice
         end
     end
 
-    def branch_progess
+    def self.branch_progess
         if Main.prompt == continues
            branch = start_game[save_branch].index += 1
            puts branch
         end
 
-         if Main.prompt == Right
+         if Main.prompt == right
             if branch start_game[save_branch] == :left_branch
                 puts start_game[:middle_branch].index += 1
             else
@@ -63,7 +63,7 @@ class Game < ActiveRecord::Base
             end
         end
 
-        if Main.prompt == Left
+        if Main.prompt == left
             if branch start_game[save_branch] == :middle_branch
                 puts start_game[:left_branch].index += 1
             else

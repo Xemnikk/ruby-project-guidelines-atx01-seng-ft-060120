@@ -45,15 +45,20 @@ def self.new_game
 #multiple choice select
     begin_word
     #This is where the game loop should start.
+
     @prompt.say("The year is blah blah blah.")
     sleep(5)
     choices = %w(Right Left Back Forward) # Need to add Save for each choice iteration. 
-    @prompt.select("Where will you go?", choices)
+    @prompt.select("Where will you go?", "Right? or Left")
+
+    @@branch_place = Game.start_game
     
 end
 
+
 def load_save
     load_save_word
+    #Game.Branch_progress
     puts "filler" #This should allow User to see previous save_instances and load whichever one the User chooses.
 end
 
