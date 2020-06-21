@@ -49,7 +49,7 @@ def self.new_game
     @prompt.say("The year is blah blah blah.")
     sleep(5)
     choices = %w(Right Left Back Forward) # Need to add Save for each choice iteration. 
-    @prompt.select("Where will you go?", "Right? or Left")
+    @prompt.select("Where will you go?", Right, Left)
 
     @@branch_place = Game.start_game
     
