@@ -47,7 +47,14 @@ def self.new_game
 #multiple choice select
     begin_word
     #This is where the game loop should start.
-    @@branch_place = Game.start_game
+   # @@branch_place = Game.start_game
+   #@@branch_place = Game.new
+
+    @prompt.say("A young Wizard stands before their greatest trial yet, A dungeon crawl filled with puzzles, traps and dead ends. Their prize? A passing grade.
+    The young Wizard enters the dungeon, and the door melts away behind them before them stands two options.
+    Left? There are scratches in the stone floor leading up to a bolted iron door 
+    or
+    Right? A worn out wooden door with water seeping from underneath it.")
 
    #Game.Branch_progress
 end
