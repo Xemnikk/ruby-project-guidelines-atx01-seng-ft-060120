@@ -22,14 +22,16 @@ class Game < ActiveRecord::Base
                         OneMB:"You enter the Pitch black hallway,and start to feel your way through the hallway. While waiting for your eyes to adjust, you realise that, at the edge of your vision you can see something moving ahead of you.", 
                         TwoMB:"There are two points of light ahead of you. As you draw near you see that something has broken through the walls the hole on your left leads to a narrow spiral staircase, and to the right is a room with water dripping from the ceiling. The hallway continues on into a familiar darkness. The things on the ceiling watch you, waiting for you to decide. Left or Right",
                         ThreeMB:"There is a drop off to the left, and if you peer through it you can just make out a suit of armour. There is another branching path to the right and you faintly hear the sound of wind chimes. Ahead of you is a black door painted to look like an open mouth. Where do you go? Left or Right?",
-                        EndMB:"This is your final test. Do you have the strength to push forward? Are you aware of what you have to face? the mouth gapes wider and you step trough...... It is done. The test of Courage,Wisdom and Resolve is complete"
+                        EndMB:"This is your final test. Do you have the strength to push forward? Are you aware of what you have to face? the mouth gapes wider and you step trough...... It is done. The test of Courage, Wisdom and Resolve is complete"
                     },
 
                 :right_branch =>{
-                            OneRB:"This is unfinished script. It's 10:33 PM and I am still working on this.", 
-                            TwoRB:"No seriously, this is the game now. No one finsihed it so here it is now in the flesh.",
-                            ThreeRB:"I really don't feel like writing story because I have been coding for too long now anyway and I just want sleep but I refuse to let our project die like this.",
-                            EndRB:"Yay! You won, yeet yah whatever. Goodbye."
+                            OneRB:"You push open the door, and your shoes get soaked in clear water. The room you enter is lined with old,smooth wood, and leads you into a corridor lined with paintings of landscapes with large,blurry figures in the background. The water drains away as you enter the hallway.
+                            ", 
+                            TwoRB:"The old wooden floors start to slope upwards and you see an opening in the wood paneled walls to your left. There is a rustling noise and you see shapes moving in the darkness. Go left?
+                            ",
+                            ThreeRB:"The smooth wood floors start to soften under your feet, and water begins to drip down faded walls, to your left is a door with a bright light shining through the crack in the bottom, Continue onwards? Or go left?",
+                            EndRB:"This is the end of your path, infront of you is a glass door, through wich you can see water and and marine life. will you step through?....... It is done. the test of Curiosity, Wonder and int "
                         }
             }
     end
