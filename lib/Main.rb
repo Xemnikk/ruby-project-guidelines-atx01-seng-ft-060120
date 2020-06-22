@@ -64,18 +64,23 @@ def self.load_save
         puts "Sorry, I couldn't find that save."
         puts "Please try again."
         self.run
+    else 
+        @@branch_place = Game.start_game
     end
 end
 
 def self.brave_allies
     brave_allies_word
-    Save.all
+    save = Save.all
+    save
+    self.run
 end
 
 def self.rate
     rate_word
     useful_data = @prompt.ask("Please write whatever you wish to say here")
     useful_data 
+    self.run
 end
 
 

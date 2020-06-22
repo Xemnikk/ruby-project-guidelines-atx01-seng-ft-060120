@@ -66,6 +66,7 @@ class Game < ActiveRecord::Base
             puts (Game.game_hash[:right_branch][:TwoRB])
             else 
                 exit_word
+                exit
             end
             sleep(5)
 
@@ -74,6 +75,7 @@ class Game < ActiveRecord::Base
             puts (Game.game_hash[:right_branch][:ThreeRB])
             else
                 exit_word
+                exit
             end
             sleep(5)
 
@@ -82,6 +84,7 @@ class Game < ActiveRecord::Base
             puts (Game.game_hash[:right_branch][:EndRB])
             else
                 exit_word
+                exit
             end
             sleep(5)
             congrats_word
@@ -95,6 +98,7 @@ class Game < ActiveRecord::Base
             puts (Game.game_hash[:left_branch][:OneLB])
             else 
                 exit_word
+                exit
             end
             sleep(5)
 
@@ -103,6 +107,7 @@ class Game < ActiveRecord::Base
             puts (Game.game_hash[:left_branch][:TwoLB])
             else
                 exit_word
+                exit
             end
             sleep(5)
 
@@ -111,6 +116,7 @@ class Game < ActiveRecord::Base
             puts (Game.game_hash[:left_branch][:ThreeLB])
             else 
                 exit_word
+                exit
             end
             sleep(5)
 
@@ -119,6 +125,7 @@ class Game < ActiveRecord::Base
             puts (Game.game_hash[:left_branch][:FourLB])
             else 
                 exit_word
+                exit
             end
             sleep(5)
 
@@ -127,6 +134,7 @@ class Game < ActiveRecord::Base
             puts (Game.game_hash[:left_branch][:EndLB])
             else
                 exit_word
+                exit
             end
             sleep(5)
             congrats_word
@@ -142,6 +150,7 @@ class Game < ActiveRecord::Base
             puts (Game.game_hash[:middle_branch][:TwoMB])
             else
                 exit_word
+                exit
             end
             sleep(5)
 
@@ -150,6 +159,7 @@ class Game < ActiveRecord::Base
             puts (Game.game_hash[:middle_branch][:ThreeMB])
             else
                 exit_word
+                exit
             end
             sleep(5)
 
@@ -158,6 +168,7 @@ class Game < ActiveRecord::Base
             puts (Game.game_hash[:middle_branch][:EndMB])
             else 
                 exit_word
+                exit
             end
             sleep(5)
             congrats_word
@@ -167,6 +178,7 @@ class Game < ActiveRecord::Base
 
         else 
             exit_word
+            exit
 
         end
  end
