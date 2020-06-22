@@ -1,6 +1,8 @@
 class Main
 
 require './lib/User.rb'
+require './lib/Save.rb'
+require './lib/Game.rb'
 # song = Music.new('./music.wav')
 # song.loop = true
 # song.play
@@ -41,34 +43,36 @@ end
 
 def self.new_game
     new_game_word
-    @@current_user = User.set_name
+    @@current_save = Save.set_save
 #multiple choice select
     begin_word
     #This is where the game loop should start.
     @@branch_place = Game.start_game
 
-    @prompt.say("The year is blah blah blah.")
-    sleep(5)
-    choices = %w(Right Left Back Forward) # Need to add Save for each choice iteration. 
-    @prompt.select("Where will you go?", Right, Left, Onward)
-
    #Game.Branch_progress
 end
 
 
-def load_save
+def self.load_save
     load_save_word
-    puts "filler" #This should allow User to see previous save_instances and load whichever one the User chooses.
+    find_save = @prompt.ask("Which save would you like me to load?", required: true)
+    @@current_save = Save.find_by(name: find_save)
+    if @@current_save == nil 
+        puts "Sorry, I couldn't find that save."
+        puts "Please try again."
+        self.run
+    end
 end
 
-def brave_allies
+def self.brave_allies
     brave_allies_word
-    puts "filler" #This should allow the User to see all save_instances for all Users and where they are in the Game. 
+    Save.all
 end
 
-def rate
+def self.rate
     rate_word
-    puts 'filler' #This should allow the User to leave a rating for the team developing the game to recommend additions to the game. 
+    useful_data = @prompt.ask("Please write whatever you wish to say here")
+    useful_data 
 end
 
 
@@ -119,21 +123,4 @@ end
 
 self.greet_user
 
-
-# collect answers
-# result = prompt.collect do
-#     key(:name).ask('Who are you?')
-# end
-
-# if NewGame then
-#     prompt.ask('What is your chosen name?', default: ENV['USER'])
-#     prompt.mask("What is your password")
-# elsif LoadSave then
-#     prompt.ask('What is your username?', default: ENV['USER'])
-#     prompt.mask("What is your password")
-# elsif ViewChoices then
-#     #show leaderboard
-# else 
-#     #run exit script
-# end
 end
