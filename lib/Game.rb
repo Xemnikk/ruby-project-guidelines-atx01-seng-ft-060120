@@ -58,39 +58,107 @@ class Game < ActiveRecord::Base
         if menu_choices == 'Right'
             puts (Game.game_hash[:right_branch][:OneRB])
             sleep(5)
+
+            yeet = PROMPT.ask("Will you continue?")
+            if yeet == "yes" || "Yes"
             puts (Game.game_hash[:right_branch][:TwoRB])
+            else 
+                exit_word
+            end
             sleep(5)
+
+            yah = PROMPT.ask("Will you continue?")
+            if yah == "yes" || "Yes"
             puts (Game.game_hash[:right_branch][:ThreeRB])
+            else
+                exit_word
+            end
             sleep(5)
+
+            hey = PROMPT.ask("Will you continue?")
+            if hey == "yes" || "Yes"
             puts (Game.game_hash[:right_branch][:EndRB])
+            else
+                exit_word
+            end
             sleep(5)
+            congrats_word
 
         elsif menu_choices == 'Left'
             puts (Game.game_hash[:left_branch][:ZeroLB])
             sleep(5)
+
+            yeet = PROMPT.ask("Will you continue?")
+            if yeet == "yes" || "Yes"
             puts (Game.game_hash[:left_branch][:OneLB])
+            else 
+                exit_word
+            end
             sleep(5)
+
+            yah = PROMPT.ask("Will you continue?")
+            if yah == "yes" || "Yes"
             puts (Game.game_hash[:left_branch][:TwoLB])
+            else
+                exit_word
+            end
             sleep(5)
+
+            hey = PROMPT.ask("Will you continue?")
+            if hey == "yes" || "Yes"
             puts (Game.game_hash[:left_branch][:ThreeLB])
+            else 
+                exit_word
+            end
             sleep(5)
+
+            lop = PROMPT.ask("Will you continue?")
+            if lop == "yes" || "Yes"
             puts (Game.game_hash[:left_branch][:FourLB])
+            else 
+                exit_word
+            end
             sleep(5)
+
+            kit = PROMPT.ask("Will you continue?")
+            if kit == "yes" || "Yes"
             puts (Game.game_hash[:left_branch][:EndLB])
+            else
+                exit_word
+            end
             sleep(5)
+            congrats_word
 
 
 
         elsif menu_choices == 'Onward'
             puts (Game.game_hash[:middle_branch][:OneMB])
             sleep(5)
+
+            yeet = PROMPT.ask("Will you continue?")
+            if yeet == "yes" || "Yes"
             puts (Game.game_hash[:middle_branch][:TwoMB])
+            else
+                exit_word
+            end
             sleep(5)
+
+            yah = PROMPT.ask("Will you continue?")
+            if yah == "yes" || "Yes"
             puts (Game.game_hash[:middle_branch][:ThreeMB])
+            else
+                exit_word
+            end
             sleep(5)
+
+            pop = PROMPT.ask("Will you continue?")
+            if pop == "yes" || "Yes"
             puts (Game.game_hash[:middle_branch][:EndMB])
+            else 
+                exit_word
+            end
             sleep(5)
-          
+            congrats_word
 
         elsif menu_choices == 'Save'
             @@current_save.save 
@@ -130,5 +198,3 @@ end
     #         end
     #     end
     # end
-
-binding.pry
