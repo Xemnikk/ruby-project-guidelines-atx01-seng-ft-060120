@@ -61,24 +61,24 @@ class Game < ActiveRecord::Base
             puts (Game.game_hash[:right_branch][:OneRB])
             sleep(5)
 
-            yeet = PROMPT.ask("Will you continue?")
-            if yeet == "yes" || "Yes"
+            yeet = PROMPT.ask("Will you continue?", required: true)
+            if yeet == "yes"
             puts (Game.game_hash[:right_branch][:TwoRB])
             else 
                 exit_word
             end
             sleep(5)
 
-            yah = PROMPT.ask("Will you continue?")
-            if yah == "yes" || "Yes"
+            yah = PROMPT.ask("Will you continue?", required: true)
+            if yah == "yes"
             puts (Game.game_hash[:right_branch][:ThreeRB])
             else
                 exit_word
             end
             sleep(5)
 
-            hey = PROMPT.ask("Will you continue?")
-            if hey == "yes" || "Yes"
+            hey = PROMPT.ask("Will you continue?", required: true)
+            if hey == "yes"
             puts (Game.game_hash[:right_branch][:EndRB])
             else
                 exit_word
@@ -90,40 +90,40 @@ class Game < ActiveRecord::Base
             puts (Game.game_hash[:left_branch][:ZeroLB])
             sleep(5)
 
-            yeet = PROMPT.ask("Will you continue?")
-            if yeet == "yes" || "Yes"
+            yeet = PROMPT.ask("Will you continue?", required: true)
+            if yeet == "yes"
             puts (Game.game_hash[:left_branch][:OneLB])
             else 
                 exit_word
             end
             sleep(5)
 
-            yah = PROMPT.ask("Will you continue?")
-            if yah == "yes" || "Yes"
+            yah = PROMPT.ask("Will you continue?", required: true)
+            if yah == "yes"
             puts (Game.game_hash[:left_branch][:TwoLB])
             else
                 exit_word
             end
             sleep(5)
 
-            hey = PROMPT.ask("Will you continue?")
-            if hey == "yes" || "Yes"
+            hey = PROMPT.ask("Will you continue?", required: true)
+            if hey == "yes"
             puts (Game.game_hash[:left_branch][:ThreeLB])
             else 
                 exit_word
             end
             sleep(5)
 
-            lop = PROMPT.ask("Will you continue?")
-            if lop == "yes" || "Yes"
+            lop = PROMPT.ask("Will you continue?", required: true)
+            if lop == "yes"
             puts (Game.game_hash[:left_branch][:FourLB])
             else 
                 exit_word
             end
             sleep(5)
 
-            kit = PROMPT.ask("Will you continue?")
-            if kit == "yes" || "Yes"
+            kit = PROMPT.ask("Will you continue?", required: true)
+            if kit == "yes"
             puts (Game.game_hash[:left_branch][:EndLB])
             else
                 exit_word
@@ -137,24 +137,24 @@ class Game < ActiveRecord::Base
             puts (Game.game_hash[:middle_branch][:OneMB])
             sleep(5)
 
-            yeet = PROMPT.ask("Will you continue?")
-            if yeet == "yes" || "Yes"
+            yeet = PROMPT.ask("Will you continue?", required: true)
+            if yeet == "yes"
             puts (Game.game_hash[:middle_branch][:TwoMB])
             else
                 exit_word
             end
             sleep(5)
 
-            yah = PROMPT.ask("Will you continue?")
-            if yah == "yes" || "Yes"
+            yah = PROMPT.ask("Will you continue?", required: true)
+            if yah == "yes"
             puts (Game.game_hash[:middle_branch][:ThreeMB])
             else
                 exit_word
             end
             sleep(5)
 
-            pop = PROMPT.ask("Will you continue?")
-            if pop == "yes" || "Yes"
+            pop = PROMPT.ask("Will you continue?", required: true)
+            if pop == "yes"
             puts (Game.game_hash[:middle_branch][:EndMB])
             else 
                 exit_word

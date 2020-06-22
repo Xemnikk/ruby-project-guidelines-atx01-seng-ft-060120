@@ -3,15 +3,9 @@ class Main
 require './lib/User.rb'
 require './lib/Save.rb'
 require './lib/Game.rb'
-# song = Music.new('./music.wav')
-# song.loop = true
-# song.play
-
-# # def play_music 
-# #     @song.play
-# #     @song.loop = true
-# # end
-# # play_music
+song = Music.new('./music.wav')
+song.loop = true
+song.play
 
 intro_word
 
@@ -55,6 +49,8 @@ def self.new_game
     Left? There are scratches in the stone floor leading up to a bolted iron door 
     or
     Right? A worn out wooden door with water seeping from underneath it.")
+
+    @@branch_place = Game.start_game
 
    #Game.Branch_progress
 end
